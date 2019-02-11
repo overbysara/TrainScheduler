@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spaceship Scheduler</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+</head>
+<body>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    
+    <div class="container">
+        <br>
+        <!-- Jumbotron Title -->
+        <div class="jumbotron">
+            <h1 class="text-center">Spaceship Arrivals</h1>
+            <h3 class="text-center">Life in 2090 is great, isn't it?</h3>
+        </div>
+        
+        <!-- Schedule Container -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Current Arrival Schedule</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr id="tableTitles">
+                                <tr>
+                                <th>Ship Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                                </tr>
+                            <tr id="row 1">
+                                <td>Apollo</td>
+                                <td>Moon</td>
+                                <td>90</td>
+                                <td>05:30 PM</td>
+                                <td>10</td>
+                            </tr>
+                                <tr id="row 2">
+                                <td>Gemini</td>
+                                <td>Florida</td>
+                                <td>30</td>
+                                <td>06:00 PM</td>
+                                <td>30</td>
+                            </tr>
+                            <tr id="row 3">
+                                <td>InSight</td>
+                                <td>Mars</td>
+                                <td>15</td>
+                                <td>05:40 PM</td>
+                                <td>20</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enter Ship, Destination, First Ship, and Frequency -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add New Ship</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="employeer-name">Ship Name</label>
+                                <input class="form-control" id="ship-name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Destination</label>
+                                <input class="form-control" id="destination" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-date">First Ship Time (HH:mm - AM or PM)</label>
+                                <input class="form-control" id="start-time" type="time">
+                            </div>
+                            <div class="form-group">
+                                <label for="monthly-rate">Frequency (minutes)</label>
+                                <input class="form-control" id="frequency" type="number">
+                            </div>
+                            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Script -->
+<script src="train.js"></script>
+</body>
+</html>
